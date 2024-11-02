@@ -9,20 +9,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="style.css" />
     <title>sifen fisaha</title>
   </head>
-  <body>
+  <body class="light-mode">
     <div class="container">
       <nav class="navbar">
         <ul class="nav-links">
           <li>
-            <a href="#"
+            <a href="index.html"
               ><ion-icon class="nav-icons active" name="home-outline"></ion-icon
             ></a>
           </li>
           <li>
-            <a href="#"
+            <a href="about.html"
               ><ion-icon
                 class="nav-icons"
                 name="person-circle-outline"
@@ -30,25 +31,139 @@
             ></a>
           </li>
           <li>
-            <a href="#"
+            <a href="project.html"
               ><ion-icon class="nav-icons" name="browsers-outline"></ion-icon
             ></a>
           </li>
         </ul>
         <div class="cta">
-          <ion-icon
-            class="nav-icons theme-toggle"
-            name="moon-outline"
-          ></ion-icon>
-          <ion-icon class="nav-icons" name="sunny-outline"></ion-icon>
+          <button id="theme-swich">
+            <ion-icon class="nav-icons" name="sunny-outline"></ion-icon>
+            <ion-icon
+              class="nav-icons theme-toggle"
+              name="moon-outline"
+            ></ion-icon>
+          </button>
           <a href="#" class="hire-me-btn">
             <span class="plus-icon">+</span>
             Hire Me
           </a>
         </div>
       </nav>
-    </div>
+      <main>
+        <section class="hero">
+          <div class="hero-content">
+            <div class="text-content">
+              <h1>Hello, I'm Sifen Fisaha</h1>
+              <p>
+                Frontend Developer from Addis Ababa, Ethiopia <br />
+                Currently based in Adama
+              </p>
 
+              <div class="button-group">
+                <button class="btn hire-me">Download CV</button>
+                <button class="btn copy-email">Contact Me</button>
+              </div>
+            </div>
+            <div class="profile-picture">
+              <img
+                src="photo_2024-11-02_14-03-56.jpg"
+                alt="Profile Picture"
+                class="profile-image"
+              />
+            </div>
+          </div>
+        </section>
+        <div class="proti">
+          <div>
+            <div class="dot"></div>
+            <h2>Project</h2>
+          </div>
+          <div>
+            <a href="./project.html" class="hire-me-btn">
+              View All
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+        <section class="projects-section">
+          <div class="project">
+            <div class="project-image">
+              <img
+                class="project-img"
+                src="https://blog.latium.org/wp-content/uploads/2022/09/2e948896757753.5eb58c727d672-1024x708.png"
+                alt="coffe"
+              />
+            </div>
+            <div class="project-discriptio">
+              <h2>Coffe Website</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, et.
+              </p>
+            </div>
+            <div class="project-icons">
+              <ion-icon name="logo-html5"></ion-icon>
+              <ion-icon name="logo-css3"></ion-icon>
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+            <div class="project-links">
+              <ion-icon class="pro-link-icon" name="link-outline"></ion-icon>
+              <ion-icon class="pro-link-icon" name="logo-github"></ion-icon>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img
+                class="project-img"
+                src="https://cdn.dribbble.com/userupload/11926853/file/original-2a0e09a5ff8afff77bbfbfd85990098f.png?resize=400x0"
+                alt="coffe"
+              />
+            </div>
+            <div class="project-discriptio">
+              <h2>Music app</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, et.
+              </p>
+            </div>
+            <div class="project-icons">
+              <ion-icon name="logo-html5"></ion-icon>
+              <ion-icon name="logo-css3"></ion-icon>
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+            <div class="project-links">
+              <ion-icon class="pro-link-icon" name="link-outline"></ion-icon>
+              <ion-icon class="pro-link-icon" name="logo-github"></ion-icon>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="proti follow-me">
+        <div>
+          <div class="dot"></div>
+          <h2>Follow Me</h2>
+        </div>
+
+        <ul class="social-media">
+          <li>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <p class="">&copy;2024 Sifen Fisaha</p>
+      </footer>
+    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

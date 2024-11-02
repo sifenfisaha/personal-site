@@ -1,0 +1,247 @@
+:root {
+  /* Background colors */
+  --bg-color: #111111;
+  --card-bg-color: #1a1a1a;
+  --navbar-bg-color: #212121;
+
+  /* Text colors */
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #cccccc;
+  --text-color-muted: #b0b0b0;
+
+  /* Icon colors */
+  --icon-color: #666666;
+  --icon-color-hover: #ffffff;
+  --icon-bg-hover: #555;
+
+  /* Button colors */
+  --btn-bg-color: #333333;
+  --btn-bg-color-hover: #444444;
+  --btn-border-color: #333333;
+
+  /* Light mode icon */
+  --light-mode-icon: #cccccc;
+
+  /* Other styling */
+  --font-family: "Poppins", sans-serif;
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
+}
+
+.light-mode {
+  /* Background colors */
+  --bg-color: #f7f7f7;
+  --card-bg-color: #ffffff;
+  --navbar-bg-color: #ffffff;
+
+  /* Text colors */
+  --text-color-primary: #111111;
+  --text-color-secondary: #333333;
+  --text-color-muted: #777777;
+
+  /* Icon colors */
+  --icon-color: #888888;
+  --icon-color-hover: #111111;
+  --icon-bg-hover: #ecececdd;
+
+  /* Button colors */
+  --btn-bg-color: #eeeeee;
+  --btn-bg-color-hover: #dddddd;
+  --btn-border-color: #cccccc;
+
+  /* Dark mode icon */
+  --light-mode-icon: #555555;
+
+  /* Other styling remains the same */
+  --font-family: "Poppins", sans-serif;
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", serif;
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--navbar-bg-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  border: 1px solid var(--btn-border-color);
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+}
+.container {
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-icons {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 7px;
+  border-radius: 50%;
+}
+.nav-icons:hover,
+.nav-icons.active {
+  background-color: var(--icon-bg-hover);
+  color: var(--icon-color-hover);
+}
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.hire-me-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--btn-bg-color); /* Button background */
+  color: var(--text-color-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hire-me-btn:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+.plus-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  font-size: 12px;
+}
+#theme-swich {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+#theme-swich ion-icon:last-child {
+  display: none;
+}
+.light-mode #theme-swich ion-icon:first-child {
+  display: none;
+}
+.light-mode #theme-swich ion-icon:last-child {
+  display: block;
+}
+/* Tablet view (768px and below) */
+@media (max-width: 700px) {
+  .hero-content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align for tablet */
+  }
+
+  .profile-picture {
+    order: -1; /* Move image to the top */
+    width: 100px; /* Adjust image size for tablets */
+    height: 100px;
+    margin-bottom: 20px; /* Space between image and text */
+  }
+
+  .text-content {
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .text-content h1 {
+    font-size: 28px; /* Slightly smaller font for tablets */
+  }
+
+  .text-content p {
+    font-size: 16px; /* Smaller paragraph font size */
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+  .plus-icon {
+    display: none;
+  }
+  .hero {
+    padding: 30px 10px; /* Less padding for small screens */
+  }
+
+  .hero-content {
+    flex-direction: column; /* Ensure vertical stacking on mobile */
+    align-items: center;
+  }
+
+  .profile-picture {
+    order: -1; /* Ensure image stays on top */
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px;
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  .text-content {
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 24px; /* Smaller font for mobile */
+  }
+
+  .text-content p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px; /* Less space between buttons */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Smaller padding on buttons */
+    font-size: 13px; /* Slightly smaller font size */
+  }
+  .hire-me-btn {
+    display: none;
+  }
+  .projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
