@@ -118,6 +118,7 @@ main {
 }
 
 .copy-email {
+  text-decoration: none;
   background-color: var(--btn-bg-color);
   color: var(--text-color-primary);
   border: 1px solid var(--btn-border-color);
@@ -291,6 +292,9 @@ footer p {
   grid-template-columns: 1fr 1fr;
   padding: 20px;
 }
+.main-title {
+  margin-bottom: 20px;
+}
 @media (max-width: 800px) {
   .projects {
     display: grid;
@@ -303,7 +307,7 @@ footer p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
 @media (max-width: 610px) {
   .projects-section {
